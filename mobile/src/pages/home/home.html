@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Alexa Says...</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let item of items | async">
+
+    <ion-card-header>{{item.title}}</ion-card-header>
+
+    <ion-card-content>
+      <ion-icon name="chatboxes-outline"></ion-icon>
+      {{item.content}}
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
